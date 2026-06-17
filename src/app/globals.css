@@ -1,2 +1,11 @@
 @import "tailwindcss";
 
+@layer components {
+  .input-button {
+    @apply border p-2 rounded-xl bg-zinc-950 border-zinc-800 outline-none focus:ring ring-emerald-600 transition duration-300 ease-in;
+  }
+
+  .primary-button{
+    @apply bg-emerald-500 text-zinc-900 py-1 rounded hover:bg-emerald-600 hover:text-zinc-950 transition duration-300 ease-in
+  }
+}

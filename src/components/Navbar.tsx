@@ -15,7 +15,7 @@ export default function Navbar() {
 
   const hour = new Date().getHours();
   let greeting = "Good Evening";
-  let emoji = <Moon size={16} color="gray" />;
+  let emoji = <Moon size={20} color="gray" />;
 
   if (hour < 18) {
     greeting = "Good Afternoon";
@@ -26,9 +26,9 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="flex justify-between items-center px-4 py-2 bg-zinc-800 text-white">
+    <nav className="flex border-b border-zinc-800 justify-between items-center px-6 py-2 bg-zinc-950 text-zinc-50">
       <div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 text-lg font-bold">
           {emoji}
           <div>{greeting}, user</div>
         </div>
@@ -37,7 +37,7 @@ export default function Navbar() {
           {day}, {date}{" "}
         </div>
       </div>
-      <div className="flex items-center gap-1 font-mono bg-zinc-600 rounded-2xl px-2 py-1">
+      <div className="flex items-center gap-1 font-mono bg-zinc-800 rounded-2xl px-2 py-1">
         <Flame size={16} color="#FD933A" />
         <div>28d streak</div>
       </div>

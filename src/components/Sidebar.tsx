@@ -11,8 +11,15 @@ import {
 
 export default function Sidebar() {
   return (
-    <aside className="flex flex-col py-2 px-2 fixed top-0 left-0 h-screen bg-[#0A0A14] text-white w-64">
-      <Image src="/darkLogo.png" alt="NoZeroDays" width="200" height="50" />
+    <aside className="flex flex-col py-2 px-2 fixed top-0 left-0 h-screen bg-[#0F0F13] text-zinc-50 w-64">
+      <Image
+        src="/darkLogo.png"
+        alt="NoZeroDays"
+        width="200"
+        height="50"
+        loading="eager"
+        priority
+      />
 
       <div className="mt-5 flex flex-col gap-5 flex-1">
         <div className="flex gap-2 items-center">
