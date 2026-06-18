@@ -60,10 +60,7 @@ export default function Sidebar() {
             <div>Notes</div>
           </div>
         </div>
-        <div className="flex flex-col gap-2">
-          <div className="text-zinc-500 font-mono">Today</div>
-          <div>3 / 5 Tasks Done</div>
-        </div>
+        
       </div>
 
       {/* profile section */}
