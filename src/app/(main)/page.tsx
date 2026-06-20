@@ -1,14 +1,17 @@
+import HabitCard from "@/components/HabitCard";
 import StudyEntryForm from "@/components/StudyEntryForm";
 import TodaysStats from "@/components/TodayStats";
 
 export default function Home() {
   return (
-    <div className="h-full bg-[#09090B] text-zinc-50 p-6">
+    <div className="flex flex-col gap-6 h-full bg-[#09090B] text-zinc-50 p-6">
       <div className="flex gap-6">
-      <StudyEntryForm />
-      <TodaysStats/>
+        <StudyEntryForm />
+        <TodaysStats />
       </div>
-      
+      <div>
+        <HabitCard />
+      </div>
     </div>
   );
 }
