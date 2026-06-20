@@ -4,7 +4,7 @@ export default function TodayStats() {
     <div className="border w-full p-8 flex flex-col gap-4 bg-zinc-900 rounded-2xl border-zinc-800">
       <div>
         <h2 className="text-2xl font-semibold">Today's Stats</h2>
-        <div className="text-zinc-400">
+        <div className="text-zinc-400 text-sm">
           Track your progress and stay consistent
         </div>
       </div>

@@ -19,7 +19,7 @@ export default function StudyEntryForm() {
     >
       <div>
         <h2 className="text-2xl font-semibold">Study Entry</h2>
-        <div className="text-zinc-400">Log the date and time you studied</div>
+        <div className="text-zinc-400 text-sm">Log the date and time you studied</div>
       </div>
 
       <div className="flex flex-col">
