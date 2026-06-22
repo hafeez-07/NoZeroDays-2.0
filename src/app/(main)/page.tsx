@@ -1,3 +1,4 @@
+import Focus from "@/components/Focus";
 import HabitCard from "@/components/HabitCard";
 import StudyEntryForm from "@/components/StudyEntryForm";
 import TodaysStats from "@/components/TodayStats";
@@ -9,8 +10,9 @@ export default function Home() {
         <StudyEntryForm />
         <TodaysStats />
       </div>
-      <div>
+      <div className="flex gap-6">
         <HabitCard />
+        <Focus />
       </div>
     </div>
   );

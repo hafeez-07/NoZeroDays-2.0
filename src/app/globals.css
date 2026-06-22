@@ -12,4 +12,6 @@
   .toggle-button{
     @apply h-8 w-8 bg-zinc-400 rounded-lg border border-zinc-200 cursor-pointer
   }
+
+  
 }
