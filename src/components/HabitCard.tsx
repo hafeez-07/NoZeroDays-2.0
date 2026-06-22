@@ -52,7 +52,7 @@ export default function HabitCard() {
   };
 
   return (
-    <div className="border border-black rounded-2xl bg-zinc-900 w-fit p-8">
+    <div className="border border-zinc-800 rounded-2xl bg-zinc-900 w-fit p-8">
       <div className="flex justify-between items-start">
         <div>
           <h2 className="text-2xl font-semibold">Habit Tracker</h2>
