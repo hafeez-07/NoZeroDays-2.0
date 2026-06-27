@@ -1,40 +1,86 @@
 "use client";
 
 import { Play, Pause, RotateCcw } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Focus() {
   const [isRunning, setIsRunning] = useState(false);
+  const [startTime, setStartTime] = useState<number | null>(null);
   const [savedTime, setSavedTime] = useState<number | null>(null);
   const [elapsedTime, setElapsedTime] = useState<number | null>(null);
   let intervalRef = useRef<number | null>(null);
 
+  //load the stored timer
+  useEffect(() => {
+    const saved = localStorage.getItem("focus-timer");
+    if (saved) {
+      const savedTimer = JSON.parse(saved);
+      setIsRunning(savedTimer.isRunning);
+      setStartTime(savedTimer.startTime);
+      setSavedTime(savedTimer.savedTime);
+    }
+  }, []);
+
+  //continue after refresh if timer is stopped or display where it paused
+  useEffect(() => {
+    if (isRunning) {
+      setElapsedTime((savedTime ?? 0) + Date.now() - (startTime ?? 0));
+      intervalRef.current = window.setInterval(() => {
+        setElapsedTime((savedTime ?? 0) + Date.now() - (startTime ?? 0));
+      }, 1000);
+    } else {
+      setElapsedTime(savedTime);
+    }
+
+    return () => {
+      if (intervalRef.current != null) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
+  }, [isRunning, savedTime, startTime]);
+
   const startHandler = () => {
     setIsRunning(true);
     const resumeTime = Date.now();
-    setElapsedTime(savedTime);
-    intervalRef.current = window.setInterval(() => {
-      setElapsedTime((savedTime ?? 0) + Date.now() - resumeTime);
-    }, 1000);
+    setStartTime(resumeTime);
+
+    localStorage.setItem(
+      "focus-timer",
+      JSON.stringify({
+        isRunning: true,
+        startTime: resumeTime,
+        savedTime,
+      }),
+    );
   };
 
   const pauseHandler = () => {
     setIsRunning(false);
     setSavedTime(elapsedTime);
-    if (intervalRef.current != null) {
-      clearInterval(intervalRef.current);
-    }
-    intervalRef.current = null;
+    localStorage.setItem(
+      "focus-timer",
+      JSON.stringify({
+        isRunning: false,
+        startTime,
+        savedTime: elapsedTime,
+      }),
+    );
   };
 
   const resetHandler = () => {
     setIsRunning(false);
+    setStartTime(0);
     setElapsedTime(0);
     setSavedTime(0);
-    if (intervalRef.current != null) {
-      clearInterval(intervalRef.current);
-    }
-    intervalRef.current = null;
+    localStorage.setItem(
+      "focus-timer",
+      JSON.stringify({
+        isRunning: false,
+        startTime: null,
+        savedTime: null,
+      }),
+    );
   };
 
   const totalSeconds = Math.floor((elapsedTime ?? 0) / 1000);
@@ -84,7 +130,7 @@ export default function Focus() {
           </button>
           <button
             onClick={resetHandler}
-            className="flex border border-zinc-700 gap-2 items-center  px-2 py-1 rounded text-zinc-50 cursor-pointer hover:opacity-80 hover:scale-[1.01] transition duration-300 ease-in"
+            className="flex border border-zinc-700 gap-2 items-center  px-2 py-1 rounded text-zinc-50 cursor-pointer hover:ring hover:opacity-80 hover:scale-[1.01] transition duration-300 ease-in"
           >
             <RotateCcw size={16} />
             Reset
