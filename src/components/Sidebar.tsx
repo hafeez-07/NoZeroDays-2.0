@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   Plus,
   Home,
@@ -30,14 +31,19 @@ export default function Sidebar() {
         <div className="flex flex-col gap-2">
           {/* main section */}
           <div className="text-zinc-500 font-mono">Main</div>
-          <div className="flex gap-2 items-center">
-            <Home size={16} />
-            <div>Home</div>
-          </div>
-          <div className="flex gap-2 items-center">
-            <LayoutDashboard size={16} />
-            <div>Dashboard</div>
-          </div>
+          <Link href="/">
+            <div className="flex gap-2 items-center">
+              <Home size={16} />
+              <div>Home</div>
+            </div>
+          </Link>
+          <Link href="/dashboard">
+            <div className="flex gap-2 items-center">
+              <LayoutDashboard size={16} />
+              <div>Dashboard</div>
+            </div>
+          </Link>
+
           <div className="flex gap-2 items-center">
             <CheckSquare size={16} />
             <div>Tasks</div>
@@ -60,7 +66,6 @@ export default function Sidebar() {
             <div>Notes</div>
           </div>
         </div>
-        
       </div>
 
       {/* profile section */}
