@@ -14,14 +14,12 @@
   }
 
   .streak-circle {
-    @apply relative h-20 w-20 border-4 border-zinc-500 rounded-full flex justify-center items-center;
-  }
-
-  .fire-icon {
-    @apply absolute -top-4  px-1 bg-zinc-900;
+    @apply relative p-3 border-y-4  border-emerald-500 rounded-full flex justify-center items-center;
   }
 
   .stat-card {
-    @apply border border-zinc-800 w-46 p-3 rounded-lg bg-zinc-900 flex flex-col items-center gap-2;
+    @apply border border-zinc-800  rounded-lg bg-zinc-900 flex  items-center gap-4 p-2;
   }
+
+  
 }
