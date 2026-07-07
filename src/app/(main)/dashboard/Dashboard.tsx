@@ -1,13 +1,15 @@
-import StatSection from "./StatSection";
-import StreakCard from "./StreakCard";
-import StudyActivityHeatmap from "./StudyActivityHeatmap";
+import StatSection from "./components/StatSection";
+import StreakCard from "./components/StreakCard";
+import StudyActivityHeatmap from "./components/StudyActivityHeatmap";
+import StudyTimeChart from "./components/StudyTimeChart";
 
 export default function Dashboard() {
   return (
     <div className="h-full text-zinc-50 bg-[#09090B] p-8">
       <StreakCard />
-      <StudyActivityHeatmap/>
+      <StudyActivityHeatmap />
       <StatSection />
+      <StudyTimeChart />
     </div>
   );
 }

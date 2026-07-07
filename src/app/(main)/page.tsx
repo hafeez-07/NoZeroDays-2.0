@@ -1,7 +1,7 @@
-import Focus from "@/components/Focus";
-import HabitCard from "@/components/HabitCard";
-import StudyEntryForm from "@/components/StudyEntryForm";
-import TodaysStats from "@/components/TodayStats";
+import Focus from "@/app/(main)/components/Focus";
+import HabitCard from "@/app/(main)/components/HabitCard";
+import StudyEntryForm from "@/app/(main)/components/StudyEntryForm";
+import TodaysStats from "@/app/(main)/components/TodayStats";
 
 export default function Home() {
   return (

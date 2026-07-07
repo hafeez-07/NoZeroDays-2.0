@@ -18,7 +18,6 @@ export default function StudyActivityHeatmap() {
 
   const year = 2026;
   let current = new Date(year, 0, 1);
-  console.log(current);
   const end = new Date(year + 1, 0, 1);
   let days = [];
   while (current < end) {

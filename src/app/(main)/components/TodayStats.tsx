@@ -34,10 +34,6 @@ export default function TodayStats() {
         <div>Last Updated</div>
         <div className="bg-black py-2 px-4 rounded-lg">Today , 10:15 AM</div>
       </div>
-      <div className="grid grid-cols-2">
-        <div>Task Done</div>
-        <div className="bg-black py-2 px-4 rounded-lg"> 2 / 5</div>
-      </div>
     </div>
   );
 }
