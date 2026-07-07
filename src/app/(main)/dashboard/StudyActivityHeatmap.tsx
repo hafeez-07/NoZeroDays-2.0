@@ -56,7 +56,7 @@ export default function StudyActivityHeatmap() {
           </div>
         </div>
         <div className="border border-zinc-600 w-fit rounded px-2  flex items-center gap-2">
-          <p className="text-sm">Last 12 Months</p>
+          <p className="text-sm">2026</p>
           <button>
             <ChevronDown size={16} />
           </button>
@@ -109,13 +109,13 @@ export default function StudyActivityHeatmap() {
           <div className="h-3 w-3 border border-emerald-300 bg-emerald-300/50"></div>
           <div className="text-zinc-400 text-sm">61-120 min</div>
         </div>
-       <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center">
           <div className="h-3 w-3 border border-emerald-800 bg-emerald-400/80 "></div>
           <div className="text-zinc-400 text-sm">121-180 min</div>
         </div>
         <div className="flex gap-2 items-center">
           <div className="h-3 w-3 border  border-emerald-200 bg-emerald-300"></div>
-          <div className="text-zinc-400 text-sm">0 min</div>
+          <div className="text-zinc-400 text-sm">180+ min</div>
         </div>
       </div>
     </div>
