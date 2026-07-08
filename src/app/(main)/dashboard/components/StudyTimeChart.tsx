@@ -14,43 +14,51 @@ export default function StudyTimeChart() {
   const lastWeekData = [
     {
       day: "Mon",
-      study: "1",
+      study: 1,
     },
     {
       day: "Tue",
-      study: "3",
+      study: 3,
     },
     {
       day: "Wed",
-      study: "5",
+      study: 5,
     },
     {
       day: "Thur",
-      study: "7",
+      study: 7,
     },
     {
       day: "Mon",
-      study: "2",
+      study: 2,
     },
     {
       day: "Fri",
-      study: "4",
+      study: 4,
     },
     {
       day: "Sat",
-      study: "6",
+      study: 6,
     },
   ];
+
+  let total = 0;
+  const totalHours = lastWeekData.map((data) => {
+    total += data.study;
+  });
+
   return (
     <div className="p-6 mt-6 rounded bg-zinc-900 w-[50%]">
-      <div className="flex  justify-between">
-        <h2 className="text-xl">
-          <span className=" font-semibold">Study Time </span>( Last 7 days )
-        </h2>
+      <h2 className="text-2xl font-semibold">Study Time</h2>
+      <div className="flex justify-between">
+        <p className="text-zinc-400 text-sm">
+          Performance in the past seven days
+        </p>
         <p>
-          <span className="font-bold">Total</span> : 28h 40m
+          Total : <span>{total}h</span>
         </p>
       </div>
+
       <ResponsiveContainer width="100%" height={200} className=" mt-6">
         <BarChart data={lastWeekData} margin={{ left: -20, top: 10 }}>
           <XAxis
@@ -78,11 +86,12 @@ export default function StudyTimeChart() {
               border: "none",
               borderRadius: "5%",
               fontSize: 12,
-              color:"white"
+              color: "white",
             }}
             itemStyle={{
               color: "white",
             }}
+            formatter={(value) => `${value}h`}
           />
         </BarChart>
       </ResponsiveContainer>

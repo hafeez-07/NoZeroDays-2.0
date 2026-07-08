@@ -1,6 +1,7 @@
 import StatSection from "./components/StatSection";
 import StreakCard from "./components/StreakCard";
 import StudyActivityHeatmap from "./components/StudyActivityHeatmap";
+import StudyDistribution from "./components/StudyDistribution";
 import StudyTimeChart from "./components/StudyTimeChart";
 
 export default function Dashboard() {
@@ -9,7 +10,10 @@ export default function Dashboard() {
       <StreakCard />
       <StudyActivityHeatmap />
       <StatSection />
-      <StudyTimeChart />
+      <div className="flex gap-6">
+        <StudyTimeChart />
+        <StudyDistribution />
+      </div>
     </div>
   );
 }
