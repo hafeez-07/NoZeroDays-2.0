@@ -20,6 +20,9 @@
   .stat-card {
     @apply border border-zinc-800  rounded-lg bg-zinc-900 flex  items-center gap-4 p-2;
   }
+}
 
-  
+input[type="date"] {
+  color-scheme: dark;
+  cursor: pointer;
 }

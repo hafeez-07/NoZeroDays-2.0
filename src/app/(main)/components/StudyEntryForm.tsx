@@ -67,7 +67,7 @@ export default function StudyEntryForm() {
           <label htmlFor="category">Category</label>
           <select
             id="category"
-            value="category"
+            value={category}
             className="input-button"
             onChange={(e) => setCategory(e.target.value)}
           >
