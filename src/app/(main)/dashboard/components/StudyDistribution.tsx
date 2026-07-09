@@ -69,6 +69,7 @@ export default function StudyDistribution() {
               data={lastMonthData}
               nameKey="name"
               dataKey="study time"
+              
               outerRadius={100}
               innerRadius={50}
               paddingAngle={3}

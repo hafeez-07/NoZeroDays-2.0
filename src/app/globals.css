@@ -26,3 +26,7 @@ input[type="date"] {
   color-scheme: dark;
   cursor: pointer;
 }
+
+[class*="recharts-"]:focus {
+  outline: none;
+}

@@ -59,7 +59,7 @@ export default function StudyTimeChart() {
         </p>
       </div>
 
-      <ResponsiveContainer width="100%" height={200} className=" mt-6">
+      <ResponsiveContainer width="100%" height={200} className="mt-6 ">
         <BarChart data={lastWeekData} margin={{ left: -20, top: 10 }}>
           <XAxis
             dataKey="day"
