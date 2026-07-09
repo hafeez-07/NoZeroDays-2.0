@@ -93,7 +93,7 @@ export default function Focus() {
   const formattedHours = String(hours).padStart(2, "0");
 
   return (
-    <div className="flex-1 p-8 border border-zinc-800 bg-zinc-900 rounded-2xl">
+    <div id="focus" className="flex-1 p-8 border border-zinc-800 bg-zinc-900 rounded-2xl">
       <div>
         <h2 className="text-2xl font-semibold">Focus Session</h2>
         <p className="text-zinc-400 text-sm">

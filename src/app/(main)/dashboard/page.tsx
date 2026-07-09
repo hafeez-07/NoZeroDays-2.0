@@ -1,5 +1,5 @@
-import Dashboard from "./Dashboard";
+import DashboardPage from "./Dashboard";
 
-export default function DashboardPage() {
-  return <Dashboard />;
+export default function Dashboard() {
+  return <DashboardPage />;
 }

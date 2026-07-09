@@ -10,7 +10,7 @@ export default function MainLayout({
   return (
     <div className="min-h-screen flex ">
       <Sidebar />
-      <div className="ml-64 border-l border-zinc-800 flex flex-col min-h-screen flex-1 ">
+      <div className="ml-58 border-l border-zinc-800 flex flex-col min-h-screen flex-1 ">
         <Navbar />
         <div className="flex-1">{children}</div>
         <Footer />

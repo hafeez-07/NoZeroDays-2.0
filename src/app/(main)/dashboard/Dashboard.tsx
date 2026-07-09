@@ -1,10 +1,10 @@
-import StatSection from "./components/StatSection";
-import StreakCard from "./components/StreakCard";
-import StudyActivityHeatmap from "./components/StudyActivityHeatmap";
-import StudyDistribution from "./components/StudyDistribution";
-import StudyTimeChart from "./components/StudyTimeChart";
+import StatSection from "./DashboardComponents/StatSection";
+import StreakCard from "./DashboardComponents/StreakCard";
+import StudyActivityHeatmap from "./DashboardComponents/StudyActivityHeatmap";
+import StudyDistribution from "./DashboardComponents/StudyDistribution";
+import StudyTimeChart from "./DashboardComponents/StudyTimeChart";
 
-export default function Dashboard() {
+export default function DashboardPage() {
   return (
     <div className="h-full text-zinc-50 bg-[#09090B] p-8">
       <StreakCard />
