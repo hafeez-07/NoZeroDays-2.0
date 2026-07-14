@@ -6,7 +6,7 @@ import StudyTimeChart from "./DashboardComponents/StudyTimeChart";
 
 export default function DashboardPage() {
   return (
-    <div className="h-full text-zinc-50 bg-[#09090B] p-8">
+    <div className="h-full   p-8">
       <StreakCard />
       <StudyActivityHeatmap />
       <StatSection />

@@ -93,13 +93,16 @@ export default function Focus() {
   const formattedHours = String(hours).padStart(2, "0");
 
   return (
-    <div id="focus" className="flex-1 p-8 border border-zinc-800 bg-zinc-900 rounded-2xl">
-      <div>
+    <section
+      id="focus"
+      className="flex-1 p-8 border border-zinc-800 bg-zinc-900 rounded-2xl"
+    >
+      <header>
         <h2 className="text-2xl font-semibold">Focus Session</h2>
         <p className="text-zinc-400 text-sm">
           Every minute counts. No zero days.
         </p>
-      </div>
+      </header>
       <div className="mt-5 ">
         <div className="flex gap-1  justify-center  text-5xl font-mono ">
           {formattedHours}
@@ -143,6 +146,6 @@ export default function Focus() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

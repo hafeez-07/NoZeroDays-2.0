@@ -17,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body
-        className={`${geistSans.className} min-h-full flex flex-col  antialiased`}
+        className={`${geistSans.className} bg-[#09090B] text-zinc-50 min-h-full flex flex-col  antialiased`}
       >
         {children}
       </body>

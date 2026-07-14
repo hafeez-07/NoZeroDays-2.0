@@ -2,7 +2,7 @@ import { Flame, Clock, Trophy } from "lucide-react";
 
 export default function StreakCard() {
   return (
-    <div className="grid grid-cols-3 w-full gap-4 ">
+    <section className="grid grid-cols-3 w-full gap-4 ">
       <div className="flex items-center gap-4 border border-zinc-800 bg-zinc-900 rounded px-6">
         <div className=" bg-emerald-300/20 p-2 rounded text-emerald-300">
           <Clock size={32} />
@@ -36,6 +36,6 @@ export default function StreakCard() {
           <p className="text-xs text-emerald-400 ">Jan 10 - Feb 10</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

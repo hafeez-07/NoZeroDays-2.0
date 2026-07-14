@@ -52,11 +52,11 @@ export default function HabitCard() {
   };
 
   return (
-    <div
+    <section
       id="habitCard"
       className="border border-zinc-800 rounded-2xl bg-zinc-900 w-fit p-8"
     >
-      <div className="flex justify-between items-start">
+      <header className="flex justify-between items-start">
         <div>
           <h2 className="text-2xl font-semibold">Habit Tracker</h2>
           <p className="text-sm text-zinc-400">
@@ -68,7 +68,7 @@ export default function HabitCard() {
           <Plus size={16} />
           Add Habit
         </button>
-      </div>
+      </header>
 
       <div className="mt-4 space-y-4 text-sm">
         <div className=" grid gap-2 grid-cols-[1fr_1fr_4fr] ">
@@ -107,6 +107,6 @@ export default function HabitCard() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

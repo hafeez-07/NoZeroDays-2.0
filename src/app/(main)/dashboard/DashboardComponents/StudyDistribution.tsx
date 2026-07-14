@@ -50,7 +50,7 @@ export default function StudyDistribution() {
     sum += data["study time"];
   });
   return (
-    <div className="w-[50%] bg-zinc-900 p-6 mt-6">
+    <section className="w-[50%] bg-zinc-900 p-6 mt-6">
       <header>
         <h2 className="text-2xl font-semibold">Study Distribution</h2>
         <div className="flex justify-between">
@@ -62,6 +62,7 @@ export default function StudyDistribution() {
           </p>
         </div>
       </header>
+
       <div>
         <ResponsiveContainer width="100%" height={220}>
           <PieChart>
@@ -69,7 +70,6 @@ export default function StudyDistribution() {
               data={lastMonthData}
               nameKey="name"
               dataKey="study time"
-              
               outerRadius={100}
               innerRadius={50}
               paddingAngle={3}
@@ -100,6 +100,6 @@ export default function StudyDistribution() {
           </PieChart>
         </ResponsiveContainer>
       </div>
-    </div>
+    </section>
   );
 }

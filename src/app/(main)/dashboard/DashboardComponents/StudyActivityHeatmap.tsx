@@ -46,7 +46,7 @@ export default function StudyActivityHeatmap() {
 
   return (
     <div className="border border-zinc-800 bg-zinc-900 p-6 mt-6">
-      <div className="flex justify-between items-start">
+      <header className="flex justify-between items-start">
         <div className="flex items-center gap-2">
           <Calendar size={32} />
           <div>
@@ -60,7 +60,7 @@ export default function StudyActivityHeatmap() {
             <ChevronDown size={16} />
           </button>
         </div>
-      </div>
+      </header>
       <div className="mt-2">
         <div
           className="grid  text-xs ml-8 "
@@ -95,7 +95,7 @@ export default function StudyActivityHeatmap() {
           </div>
         </div>
       </div>
-      <div className="flex gap-5 mt-5">
+      <footer className="flex gap-5 mt-5">
         <div className="flex gap-2 items-center">
           <div className="h-3 w-3 border bg-zinc-900 border-zinc-700"></div>
           <div className="text-zinc-400 text-sm ">0 min</div>
@@ -116,7 +116,7 @@ export default function StudyActivityHeatmap() {
           <div className="h-3 w-3 border  border-emerald-200 bg-emerald-300"></div>
           <div className="text-zinc-400 text-sm">180+ min</div>
         </div>
-      </div>
+      </footer>
     </div>
   );
 }

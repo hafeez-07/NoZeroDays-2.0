@@ -10,7 +10,7 @@ import {
 
 export default function StatSection() {
   return (
-    <div className="grid grid-cols-6 mt-5 w-full gap-3">
+    <section className="grid grid-cols-6 mt-5 w-full gap-3">
       <div className="stat-card">
         <div className="border border-zinc-700 rounded  bg-white/20 p-1">
           <NotebookPen />
@@ -61,6 +61,6 @@ export default function StatSection() {
           <p className="text-sm text-zinc-400">Consistency</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

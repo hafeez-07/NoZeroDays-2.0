@@ -48,16 +48,19 @@ export default function StudyTimeChart() {
   });
 
   return (
-    <div className="p-6 mt-6 rounded bg-zinc-900 w-[50%]">
-      <h2 className="text-2xl font-semibold">Study Time</h2>
-      <div className="flex justify-between">
-        <p className="text-zinc-400 text-sm">
-          Performance in the past seven days
-        </p>
-        <p>
-          Total : <span>{total}h</span>
-        </p>
-      </div>
+    <section className="p-6 mt-6 rounded bg-zinc-900 w-[50%]">
+      <header>
+        <h2 className="text-2xl font-semibold">Study Time</h2>
+
+        <div className="flex justify-between">
+          <p className="text-zinc-400 text-sm">
+            Performance in the past seven days
+          </p>
+          <p>
+            Total : <span>{total}h</span>
+          </p>
+        </div>
+      </header>
 
       <ResponsiveContainer width="100%" height={200} className="mt-6 ">
         <BarChart data={lastWeekData} margin={{ left: -20, top: 10 }}>
@@ -95,6 +98,6 @@ export default function StudyTimeChart() {
           />
         </BarChart>
       </ResponsiveContainer>
-    </div>
+    </section>
   );
 }
