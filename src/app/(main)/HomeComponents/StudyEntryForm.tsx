@@ -21,7 +21,7 @@ export default function StudyEntryForm() {
           Log the date and time you studied
         </div>
       </header>
-      <form onSubmit={submitHandler} className=" flex flex-col gap-6 ">
+      <form onSubmit={submitHandler} className="mt-4 flex flex-col gap-6 ">
         <div className="flex flex-col">
           <label htmlFor="date">Date</label>
           <input
